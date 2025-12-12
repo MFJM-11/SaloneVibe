@@ -1,0 +1,12 @@
+RewriteEngine On
+RewriteBase /Salone_Vibe/public/
+
+# Route API requests to api/index.php
+RewriteCond %{REQUEST_URI} ^/Salone_Vibe/public/api
+RewriteRule ^api/(.*)$ ../api/index.php [QSA,L]
+
+# Route all other requests to index.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php [QSA,L]
+

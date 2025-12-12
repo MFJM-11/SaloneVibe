@@ -1,0 +1,28 @@
+# Dependencies
+node_modules/
+package-lock.json
+
+# Tailwind build output
+public/assets/css/styles-tailwind.css
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+
+# Sensitive configuration (use config.example.php instead)
+config/config.php
+
+# Config files with sensitive data (keep structure, but don't commit secrets)
+# config/config.php - Contains database credentials and JWT secret
+# Note: You may want to commit a config.example.php instead
+

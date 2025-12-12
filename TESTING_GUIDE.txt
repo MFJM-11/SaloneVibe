@@ -1,0 +1,124 @@
+SALONE VIBE - TESTING GUIDE
+===========================
+
+QUICK START:
+1. Start XAMPP Services:
+   - Open XAMPP Control Panel
+   - Start Apache
+   - Start MySQL
+
+2. Setup Database:
+   - Open phpMyAdmin: http://localhost/phpmyadmin
+   - Create database: salonevibe
+   - Import: database/schema.sql
+   - This creates tables + seeds 49 artists
+
+3. Access Application:
+   - URL: http://localhost/Salone_Vibe/public/
+   - Or: http://localhost:8000 (if using PHP built-in server)
+
+TESTING CHECKLIST:
+==================
+
+✓ BASIC FUNCTIONALITY:
+  [ ] Homepage loads with glassmorphic design
+  [ ] Sidebar navigation visible
+  [ ] Hero section displays correctly
+  [ ] Artist grid shows 49 artists
+  [ ] Image placeholders visible on artist cards
+
+✓ SEARCH & FILTERS:
+  [ ] Search by artist name works
+  [ ] Genre filter dropdown populated
+  [ ] City/Region filter dropdown populated
+  [ ] Genre tag chips clickable and filter results
+  [ ] Filters combine correctly (search + genre + city)
+
+✓ ARTIST DASHBOARD:
+  [ ] Click "View Details" opens full artist dashboard
+  [ ] Artist header displays correctly
+  [ ] Verified badge shows
+  [ ] Monthly listeners count displays
+  [ ] Artist image placeholder visible
+  [ ] Play/Follow buttons work
+  [ ] Tab navigation works (Popular, Discography, etc.)
+  [ ] Popular songs list renders
+  [ ] Album artwork placeholders visible
+  [ ] Back button returns to grid view
+
+✓ AUTHENTICATION:
+  [ ] Click "Log in / Sign up" opens modal
+  [ ] Two-column layout displays (promo + form)
+  [ ] Promotional image placeholder visible
+  [ ] Tab switcher works (Sign Up / Sign In / Artist)
+  [ ] Sign Up form:
+      [ ] First Name & Last Name fields
+      [ ] Email field
+      [ ] Password & Re-enter password
+      [ ] Terms checkbox
+      [ ] Password validation (must match)
+      [ ] Social buttons (Google/Facebook) visible
+  [ ] Sign In form:
+      [ ] Email & Password fields
+      [ ] Remember me checkbox
+      [ ] Forgot Password link
+  [ ] Can create new account
+  [ ] Can login with created account
+  [ ] Can login with default admin:
+      Email: admin@salonevibe.com
+      Password: qwer18432
+
+✓ USER PROFILE:
+  [ ] Profile modal opens
+  [ ] Can update display name
+  [ ] Can update profile image URL
+  [ ] Can update bio
+  [ ] Can update location
+  [ ] Changes save correctly
+
+✓ FAVORITES:
+  [ ] Heart icon on artist cards
+  [ ] Can add artist to favorites (when logged in)
+  [ ] Can remove from favorites
+  [ ] Favorites panel updates
+  [ ] Favorites persist after page reload
+
+✓ ADMIN FEATURES:
+  [ ] Admin nav link appears for admin users
+  [ ] Admin panel visible
+  [ ] Can create new artist profile
+  [ ] Can create artist account
+  [ ] New artists appear in grid
+
+✓ RESPONSIVE DESIGN:
+  [ ] Mobile view (< 800px) works
+  [ ] Tablet view (800-1200px) works
+  [ ] Desktop view works
+  [ ] Sidebar collapses on mobile
+  [ ] Auth modal adapts to mobile
+
+✓ API ENDPOINTS:
+  [ ] GET /api/artists - Returns artist list
+  [ ] GET /api/artists/:id - Returns artist detail
+  [ ] POST /api/auth/signup - Creates account
+  [ ] POST /api/auth/login - Logs in user
+  [ ] GET /api/users/me - Gets user profile
+  [ ] PUT /api/users/me - Updates profile
+  [ ] GET /api/favorites - Lists favorites
+  [ ] POST /api/favorites - Adds favorite
+  [ ] DELETE /api/favorites/:id - Removes favorite
+
+✓ DESIGN ELEMENTS:
+  [ ] Glassmorphism effects visible
+  [ ] Green-to-blue gradients (#00FF5B → #0014FF)
+  [ ] Purple gradient background
+  [ ] Smooth animations on scroll
+  [ ] Hover effects on cards
+  [ ] Modal transitions smooth
+  [ ] Toast notifications work
+
+KNOWN ISSUES TO CHECK:
+- Image placeholders should show camera emoji
+- All glassmorphic elements should have blur effect
+- Safari compatibility (webkit prefixes added)
+

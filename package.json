@@ -1,0 +1,13 @@
+{
+  "name": "salonevibe",
+  "version": "1.0.0",
+  "description": "SaloneVibe - Discover Sierra Leone Music",
+  "scripts": {
+    "build-css": "tailwindcss -i ./public/assets/css/input.css -o ./public/assets/css/styles-tailwind.css --minify",
+    "watch-css": "tailwindcss -i ./public/assets/css/input.css -o ./public/assets/css/styles-tailwind.css --watch"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.1"
+  }
+}
+
